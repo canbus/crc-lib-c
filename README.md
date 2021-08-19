@@ -61,3 +61,6 @@ int main()
     return 0;
 }
 ```
+
+CRC计算原理：
+https://zhuanlan.zhihu.com/p/256487370
