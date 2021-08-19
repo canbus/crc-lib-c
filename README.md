@@ -35,3 +35,29 @@
 
 - CRC_Calc v0.1：http://xz.w10a.com/Small/CRCJISUANQI.zip
 - 格西CRC计算器：http://www.geshe.com/home/products/GToolbox/bin/GCRC.exe
+
+使用
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include "crcLib.h"
+
+int main()
+{
+    uint8_t LENGTH = 10;
+    uint8_t data[LENGTH];
+    uint8_t crc;
+
+    for(int i = 0; i < LENGTH; i++)
+    {
+        data[i] = i*5;
+        printf("%02x ", data[i]);
+    }
+    printf("\n");
+
+    crc = crc8_maxim(data, LENGTH);
+
+    printf("CRC-8/MAXIM:%02x\n", crc);
+    return 0;
+}
+```
